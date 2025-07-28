@@ -126,6 +126,15 @@ body {
   grid-column: 1/3;
 }
 
+.hero__image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
 .header__container .logo img {
   width: 46px;
   height: 28px;
@@ -644,14 +653,10 @@ body {
 }
 
 .hero__image {
+  grid-column: 7/-1;
   position: relative;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  object-fit: cover;
   width: 100%;
-  border-top-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  margin-right: -120px;
 }
 
 @media (min-width: 2560px) {
@@ -691,6 +696,7 @@ body {
     right: 0;
     width: 502px;
     height: 100%;
+    margin-right: -100px;
   }
 }
 
@@ -1366,7 +1372,7 @@ body {
 }
 
 .cta-block {
-  background-image: url(/src/images/logo/shapes-1.png);
+  background-image: url('../images/logo/shapes-1.png');
   background-color: #fff;
   background-size: cover;
   background-position: center;
@@ -1499,6 +1505,7 @@ body {
 .footer__input,
 .footer__textarea {
   grid-column: 1/-1;
+  margin-bottom: 48px;
   padding: 12px 0;
   font-size: 14px;
   background-color: transparent;
@@ -1509,6 +1516,13 @@ body {
   outline: none;
   resize: none;
   transition: border-color 0.3s ease;
+}
+
+@media (min-width: 321px) and (max-width: 639px) {
+  .footer__input,
+  .footer__textarea {
+    margin-bottom: 40px;
+  }
 }
 
 @media (min-width: 640px) and (max-width: 1024px) {
@@ -1543,7 +1557,7 @@ body {
   border-radius: 6px;
   cursor: pointer;
   font-family: Poppins, sans-serif;
-  margin-top: 80px;
+  margin-top: 32px;
   transition: background-color 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s;
@@ -1563,6 +1577,7 @@ body {
     grid-column: 1/-1;
     width: 100%;
     justify-self: stretch;
+    margin-top: 16px;
     margin-bottom: 8px;
   }
 }
@@ -1626,6 +1641,16 @@ body {
   display: flex;
   gap: 32px;
   align-items: center;
+}
+
+.footer__socials .social-icon {
+  fill: currentColor;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer__socials a:hover .social-icon {
+  color: #2060f6;
 }
 
 @media (min-width: 640px) and (max-width: 1024px) {

@@ -49,6 +49,11 @@
   &__input,
   &__textarea {
     grid-column: 1 / -1;
+    margin-bottom: 48px;
+
+    @include xs {
+      margin-bottom: 40px;
+    }
 
     @include sm {
       grid-column: 1 / 5;
@@ -90,6 +95,7 @@
       grid-column: 1 / -1;
       width: 100%;
       justify-self: stretch;
+      margin-top: 16px;
       margin-bottom: 8px;
     }
 
@@ -104,7 +110,7 @@
     border-radius: 6px;
     cursor: pointer;
     font-family: Poppins, sans-serif;
-    margin-top: 80px;
+    margin-top: 32px;
     transition: background-color 0.3s ease;
 
     transition: transform 0.3s ease;
@@ -163,6 +169,15 @@
   display: flex;
   gap: 32px;
   align-items: center;
+  .social-icon {
+    fill: currentColor;
+    color: white;
+    transition: color 0.3s ease;
+  }
+
+  a:hover .social-icon {
+    color: #2060f6;
+  }
 
   @include sm {
     margin-bottom: 139px;

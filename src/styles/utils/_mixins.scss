@@ -5,10 +5,8 @@
   }
 }
 
-// _mixins.scss
 @mixin respond($breakpoint) {
   @if $breakpoint == 'xs' {
-    // Мобільний: від 321 до 639 пікселів
     @media (min-width: 321px) and (max-width: 639px) {
       @content;
     }
